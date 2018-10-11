@@ -30,8 +30,12 @@ public final class RealmConfiguration {
             return nil
         }
 
+        #if os(tvOS)
         let appGroupPath = appGroupContainer.appendingPathComponent("Library/Caches/").path
         return appGroupPath
+        #else
+        return appGroupContainer.path
+        #endif
     }
 
     class public func setDefaultRealmConfig() {
@@ -49,8 +53,13 @@ public final class RealmConfiguration {
                 path = paths.first
             }
         #else
+        var path: String?
+        if RealmConfiguration.supportsAppGroups {
+            path = RealmConfiguration.appGroupPath
+        } else {
             let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
-            let path: String? = paths.first
+            path = paths.first
+        }
         #endif
         let realmURL = URL(fileURLWithPath: path!).appendingPathComponent("default.realm")
 
