@@ -62,7 +62,7 @@ public final class RealmConfiguration {
         }
         #endif
         let realmURL = URL(fileURLWithPath: path!).appendingPathComponent("default.realm")
-
+        ILOG("Using realm URL \(realmURL.path)")
         let migrationBlock: MigrationBlock = { migration, oldSchemaVersion in
             if oldSchemaVersion < 2 {
                 ILOG("Migrating to version 2. Adding MD5s")
