@@ -62,6 +62,9 @@ public final class RealmConfiguration {
         }
         #endif
         let realmURL = URL(fileURLWithPath: path!).appendingPathComponent("default.realm")
+        NSLog("Container UR for group \(PVAppGroupId) : \(FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: PVAppGroupId)?.path ?? "NIL")")
+        ILOG("Container UR for group \(PVAppGroupId) : \(FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: PVAppGroupId))")
+        NSLog("Using realm URL \(realmURL.path)")
         ILOG("Using realm URL \(realmURL.path)")
         let migrationBlock: MigrationBlock = { migration, oldSchemaVersion in
             if oldSchemaVersion < 2 {
