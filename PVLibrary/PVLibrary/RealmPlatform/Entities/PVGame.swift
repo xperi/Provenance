@@ -80,7 +80,7 @@ public final class PVGame: Object, PVLibraryEntry {
     public dynamic var referenceURL: String?
     public dynamic var releaseID: String?
     public dynamic var regionName: String?
-    public dynamic var regionID: Int?
+    public var regionID: Int?
     public dynamic var systemShortName: String?
     public dynamic var language: String?
 

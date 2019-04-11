@@ -13,7 +13,7 @@ import RealmSwift
 public final class PVCore: Object {
     public dynamic var identifier: String = ""
     public dynamic var principleClass: String = ""
-    public dynamic var supportedSystems = List<PVSystem>()
+    public var supportedSystems = List<PVSystem>()
 
     public dynamic var projectName = ""
     public dynamic var projectURL = ""
