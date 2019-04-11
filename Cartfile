@@ -1,5 +1,5 @@
 # App
-github "bitstadium/HockeySDK-iOS" "5.1.4"
+github "acamill/HockeySDK-iOS" "misc/xcode10.2-tmp-fix"
 github "bitstadium/HockeySDK-tvOS" "5.1.0"
 github "xmartlabs/XLActionController" "4.1.1"
 github "bcylin/QuickTableViewController" "v1.1.0"
@@ -22,7 +22,7 @@ binary "https://building42.github.io/Specs/Carthage/tvOS/Fabric.json"
 # PVSupport
 github "fpillet/NSLogger" "v1.9.7"
 github "CocoaLumberjack/CocoaLumberjack" "3.4.2"
-github "radex/SwiftyUserDefaults" "3.0.1"
+github "radex/SwiftyUserDefaults" "master"
 github "ashleymills/Reachability.swift"
 
 # PVLibrary

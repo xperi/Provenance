@@ -91,7 +91,7 @@ pre_setup:
 check_for_ruby:
 	$(info Checking for Ruby…)
 
-ifeq ($(RUBY),)	
+ifeq ($(RUBY),)
 	$(error Ruby is not installed.)
 endif
 
@@ -171,13 +171,13 @@ submodules:
 	$(info Updating submodules…)
 
 	git submodule update --init --recursive
-	
+
 ## -- QA Task Runners --
 
 codecov_upload:
 	curl -s https://codecov.io/bash | bash
 
-danger: 
+danger:
 	bundle exec danger
 
 ## -- Testing --
@@ -192,7 +192,7 @@ developer_ios:
 	$(info Building iOS for Developer profile…)
 
 	bundle exec fastlane build_developer scheme:Provenance-Release
-	
+
 developer_tvos:
 	$(info Building tvOS for Developer profile…)
 
